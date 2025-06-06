@@ -1,46 +1,112 @@
-# Getting Started with Create React App
+# MUI 基礎学習プロジェクト
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+このプロジェクトは、Material-UI (MUI) の基本的なコンポーネントの使用方法を学ぶためのサンプルアプリケーションです。
 
-## Available Scripts
+## 機能概要
 
-In the project directory, you can run:
+シンプルなフォーム画面を実装し、以下の MUI コンポーネントの使用方法を学習します：
 
-### `npm start`
+1. **TextField** - テキスト入力フィールド
+2. **Button** - ボタン
+3. **Box** - レイアウトコンポーネント
+4. **Typography** - テキスト表示
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 実装機能
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- ユーザー名入力フィールド
+- メールアドレス入力フィールド
+- 送信ボタン
+- リアルタイムでの入力内容表示
 
-### `npm test`
+## 技術スタック
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React 18
+- TypeScript
+- Material-UI (MUI) v5
+- Emotion (MUI のスタイリングエンジン)
 
-### `npm run build`
+## プロジェクト構造
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+mui-basic/
+├── src/
+│   ├── pages/
+│   │   └── FormPage.tsx  // フォームページコンポーネント
+│   ├── App.tsx          // メインアプリケーション
+│   └── ...
+└── ...
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## セットアップ方法
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. 依存パッケージのインストール:
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. 開発サーバーの起動:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+アプリケーションは http://localhost:3000 で起動します。
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 実装の特徴
 
-## Learn More
+1. **MUI コンポーネントの活用**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   - `TextField`による入力フォーム
+   - `Button`によるアクション
+   - `Box`によるレイアウト
+   - `Typography`によるテキスト表示
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **React の状態管理**
+
+   - `useState`フックによる入力値の管理
+   - リアルタイムでの表示更新
+
+3. **MUI のスタイリング**
+   - `sx`プロパティによるスタイリング
+   - レスポンシブデザイン対応
+   - Material Design に準拠した UI
+
+## 学習ポイント
+
+1. **基本的な MUI コンポーネントの使用方法**
+
+   ```tsx
+   <TextField
+     fullWidth
+     label="ユーザー名"
+     value={username}
+     onChange={(e) => setUsername(e.target.value)}
+     variant="outlined"
+   />
+   ```
+
+2. **MUI のスタイリング手法**
+   ```tsx
+   <Box
+     sx={{
+       maxWidth: 400,
+       mx: 'auto',
+       mt: 4,
+       p: 3,
+       boxShadow: 1,
+       borderRadius: 1,
+     }}
+   >
+   ```
+
+## 注意点
+
+- このプロジェクトは MUI の基礎学習用です
+- 実際のプロダクションでは、バリデーションやエラーハンドリングなども実装する必要があります
+
+## 参考リンク
+
+- [MUI 公式ドキュメント](https://mui.com/)
+- [React 公式ドキュメント](https://react.dev/)
+- [TypeScript 公式ドキュメント](https://www.typescriptlang.org/)
